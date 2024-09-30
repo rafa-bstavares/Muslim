@@ -18,7 +18,7 @@ gsap.registerPlugin(ScrollTrigger)
 
 
 
-export default function Produtos(){
+export default function ProdutosMobile(){
 
 
   const titulo = "Produtos"
@@ -28,7 +28,8 @@ export default function Produtos(){
         scrollTrigger: {
             trigger: ".containerProdutos",
             start: "200px bottom",
-            end: "200px bottom"
+            end: "200px bottom",
+            markers: true
         }
     });
     textAnimation1.from('.text', {
@@ -39,66 +40,125 @@ export default function Produtos(){
     });
 
 
-    //ANIMAÇÕES DESKTOP
-    gsap.from(".cartaLinha1", {
+
+
+
+    //ANIMAÇÕES MOBILE
+    gsap.from(".cartaTotalMobile1", {
         scrollTrigger: {
-            trigger: ".linha1Prod",
-            start: "400px bottom",
-            end: "800px bottom",
+            trigger: ".cartaTotalMobile1",
+            start: "80px bottom",
+            end: "400px bottom",
             toggleActions: "play none none reverse"
         },
-        y: "600px",
-        x: "200px",
-        rotate: "10deg",
-        
-        stagger: {
-            each: 0.3
-        },
-        duration: 0.7
+        y: "150px",
+        xPercent: -110,
+        rotate: "-10deg"
     })
 
-    gsap.from(".cartaLinha2", {
+    gsap.from(".cartaTotalMobile2", {
         scrollTrigger: {
-            trigger: ".linha2Prod",
-            start: "400px bottom",
-            end: "800px bottom",
+            trigger: ".cartaTotalMobile2",
+            start: "80px bottom",
+            end: "400px bottom",
             toggleActions: "play none none reverse"
         },
-        y: "600px",
-        x: "200px",
-        rotate: "10deg",
-        stagger: {
-            each: 0.3
-        },
-        duration: 0.7
+        y: "150px",
+        xPercent: 110,
+        rotate: "10deg"
     })
 
-    gsap.from(".cartaLinha3", {
+    gsap.from(".cartaTotalMobile3", {
         scrollTrigger: {
-            trigger: ".linha3Prod",
-            start: "400px bottom",
-            end: "800px bottom",
+            trigger: ".cartaTotalMobile3",
+            start: "80px bottom",
+            end: "400px bottom",
             toggleActions: "play none none reverse"
         },
-        y: "600px",
-        x: "200px",
-        rotate: "10deg",
-        stagger: {
-            each: 0.3
-        },
-        duration: 0.7
+        y: "150px",
+        xPercent: -110,
+        rotate: "-10deg"
     })
 
+    gsap.from(".cartaTotalMobile4", {
+        scrollTrigger: {
+            trigger: ".cartaTotalMobile4",
+            start: "80px bottom",
+            end: "400px bottom",
+            toggleActions: "play none none reverse"
+        },
+        y: "150px",
+        xPercent: 110,
+        rotate: "10deg"
+    })
 
+    gsap.from(".cartaTotalMobile5", {
+        scrollTrigger: {
+            trigger: ".cartaTotalMobile5",
+            start: "80px bottom",
+            end: "400px bottom",
+            toggleActions: "play none none reverse"
+        },
+        y: "150px",
+        xPercent: -110,
+        rotate: "-10deg"
+    })
+    
+    gsap.from(".cartaTotalMobile6", {
+        scrollTrigger: {
+            trigger: ".cartaTotalMobile6",
+            start: "80px bottom",
+            end: "400px bottom",
+            toggleActions: "play none none reverse"
+        },
+        y: "150px",
+        xPercent: 110,
+        rotate: "10deg"
+    })
 
+    gsap.from(".cartaTotalMobile7", {
+        scrollTrigger: {
+            trigger: ".cartaTotalMobile7",
+            start: "80px bottom",
+            end: "400px bottom",
+            toggleActions: "play none none reverse"
+        },
+        y: "150px",
+        xPercent: -110,
+        rotate: "-10deg"
+    })
+
+    gsap.from(".cartaTotalMobile8", {
+        scrollTrigger: {
+            trigger: ".cartaTotalMobile8",
+            start: "80px bottom",
+            end: "400px bottom",
+            toggleActions: "play none none reverse"
+        },
+        y: "150px",
+        xPercent: 110,
+        rotate: "10deg"
+    })
+
+    gsap.from(".cartaTotalMobile9", {
+        scrollTrigger: {
+            trigger: ".cartaTotalMobile9",
+            start: "80px bottom",
+            end: "400px bottom",
+            toggleActions: "play none none reverse"
+        },
+        y: "150px",
+        xPercent: -110,
+        rotate: "-10deg"
+    })
 
   })
 
 
     return (
-        <div className="containerProdutos bg-verdeClaro px-[50px] py-[100px] hidden lg:block">
-            <div className="flex flex-col ">
-                <div className="text-verdeEscuro text-6xl lg:mt-0 mt-12 uppercase flex overflow-hidden relative z-50">
+        <div className="containerProdutos bg-verdeClaro py-[50px] lg:hidden">
+            <div className="flex flex-col w-[90vw] m-[0_auto]">
+                <div className="text-verdeEscuro text-4xl lg:mt-0 uppercase flex overflow-hidden">
                     {
                         titulo.split("").map(item => {
                             if(item == " "){
@@ -109,47 +169,47 @@ export default function Produtos(){
                         })
                     }
                 </div>
-                <div  className="linha1Prod flex flex-col lg:mt-20 mt-12 lg:gap-32 gap-8">
+                <div  className=" flex flex-col lg:mt-20 mt-12 lg:gap-32 gap-8">
                     <div className="flex lg:flex-row flex-col lg:gap-20 gap-8">
-                        <div className=" flex flex-col gap-2 lg:w-1/3 w-full">
+                        <div className="cartaTotalMobile1 flex flex-col gap-2 lg:w-1/3 w-full">
                             <div className="text-verdeEscuro text-xl font-Montserrat opacity-70">Trajes Masculinos</div>
                             <CartaProduto linha="cartaLinha1" img={trajeMas} cta="Ver mais" titulo="Trajes Masculinos"/>
                         </div>
-                        <div className=" flex flex-col gap-2 lg:w-1/3 w-full">
+                        <div className="cartaTotalMobile2 flex flex-col gap-2 lg:w-1/3 w-full">
                             <div className="text-verdeEscuro text-xl font-Montserrat opacity-70">Trajes Femininos</div>
                             <CartaProduto linha="cartaLinha1" img={trajeFem} cta="Ver mais" titulo="Trajes Femininos"/>
                         </div>
-                        <div className=" flex flex-col gap-2 lg:w-1/3 w-full">
+                        <div className="cartaTotalMobile3 flex flex-col gap-2 lg:w-1/3 w-full">
                             <div className="text-verdeEscuro text-xl font-Montserrat opacity-70">Camisetas Islâmicas</div>
                             <CartaProduto linha="cartaLinha1" img={camisasProdutos} cta="Ver mais" titulo="Camisas Produtos"/>
                         </div>
                     </div>
 
-                    <div className="linha2Prod flex lg:flex-row flex-col lg:gap-20 gap-8">
-                        <div className=" flex flex-col gap-2 lg:w-1/3 w-full">
+                    <div className=" flex lg:flex-row flex-col lg:gap-20 gap-8">
+                        <div className="cartaTotalMobile4 flex flex-col gap-2 lg:w-1/3 w-full">
                             <div className="text-verdeEscuro text-xl font-Montserrat opacity-70">Alcorão</div>
                             <CartaProduto linha="cartaLinha2" img={alcorao} cta="Ver mais" titulo="Alcorão"/>
                         </div>
-                        <div className=" flex flex-col gap-2 lg:w-1/3 w-full">
+                        <div className="cartaTotalMobile5 flex flex-col gap-2 lg:w-1/3 w-full">
                             <div className="text-verdeEscuro text-xl font-Montserrat opacity-70">Viajem à Meca</div>
                             <CartaProduto linha="cartaLinha2" img={meca} cta="Ver mais" titulo="Viajem à Meca"/>
                         </div>
-                        <div className=" flex flex-col gap-2 lg:w-1/3 w-full">
+                        <div className="cartaTotalMobile6 flex flex-col gap-2 lg:w-1/3 w-full">
                             <div className="text-verdeEscuro text-xl font-Montserrat opacity-70">Calendário Islâmico</div>
                             <CartaProduto linha="cartaLinha2" img={calendario} cta="Ver mais" titulo="Calendário Islâmico"/>
                         </div>
                     </div>
 
-                    <div className="linha3Prod flex lg:flex-row flex-col lg:gap-20 gap-8">
-                        <div className=" flex flex-col gap-2 lg:w-1/3 w-full">
+                    <div className=" flex lg:flex-row flex-col lg:gap-20 gap-8">
+                        <div className="cartaTotalMobile7 flex flex-col gap-2 lg:w-1/3 w-full">
                             <div className="text-verdeEscuro text-xl font-Montserrat opacity-70">Impressão dos 5 Pilares do Islã</div>
                             <CartaProduto linha="cartaLinha3" img={pilares} cta="Ver mais" titulo="5 pilares"/>
                         </div>
-                        <div className=" flex flex-col gap-2 lg:w-1/3 w-full">
+                        <div className="cartaTotalMobile8 flex flex-col gap-2 lg:w-1/3 w-full">
                             <div className="text-verdeEscuro text-xl font-Montserrat opacity-70">Literatura "A Mulher no Islã"</div>
                             <CartaProduto linha="cartaLinha3" img={literatura} cta="Ver mais" titulo="literatura"/>
                         </div>
-                        <div className=" flex flex-col gap-2 lg:w-1/3 w-full">
+                        <div className="cartaTotalMobile9 flex flex-col gap-2 lg:w-1/3 w-full">
                             <div className="text-verdeEscuro text-xl font-Montserrat opacity-70">Calendário Islâmico</div>
                             <CartaProduto linha="cartaLinha3" img={calendario} cta="Ver mais" titulo="Calendário Islâmico"/>
                         </div>
