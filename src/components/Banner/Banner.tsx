@@ -1,5 +1,4 @@
 import AlcoraoBanner from "../../assets/images/imgAlcorao2.jpg"
-import imgBannerFundo from "../../assets/images/ImagemFundoBanner.jpg"
 import bannerHomem from "../../assets/images/BannerHomem.jpg"
 import textoFundoBanner from "../../assets/images/textoFundoBanner.jpg"
 import { useRef } from "react"
@@ -20,7 +19,6 @@ export default function Banner(){
     const imgTexto2 = useRef(null)
     const imgTexto3 = useRef(null)
     const imgTexto4 = useRef(null)
-    const text1 = useRef(null)
 
     const tituloL1 = "Celebre sua Fé com"
     const tituloL2 = "Produtos Islâmicos"
@@ -83,7 +81,7 @@ export default function Banner(){
 
 
 
-        let textAnimation1 = gsap.timeline();
+        const textAnimation1 = gsap.timeline();
         textAnimation1.from(".texto1", {
                 y: 100,
             stagger: { 
@@ -91,7 +89,7 @@ export default function Banner(){
             }
         });
 
-        let textAnimation2 = gsap.timeline();
+        const textAnimation2 = gsap.timeline();
         textAnimation2.from(".texto2", {
             y: 100,
             delay: 0.3,
@@ -100,7 +98,7 @@ export default function Banner(){
             }
             });
 
-        let textAnimation3 = gsap.timeline();
+        const textAnimation3 = gsap.timeline();
         textAnimation3.from(".texto3", {
             y: 100,
             delay: 0.6,
@@ -121,7 +119,7 @@ export default function Banner(){
             <div className="h-[20vh] relative lg:block hidden">
                 <img className="ml-[10%] h-full w-auto object-cover" src={AlcoraoBanner} alt="imagem alcorão" />
             </div>
-            <div className="absolute h-[20vh] bottom-0 right-0 z-30 translate-y-1/4 translate-x-1/2">
+            <div className="lg:hidden absolute h-[20vh] bottom-0 right-0 z-30 translate-y-1/4 translate-x-1/2">
                 <img className="h-full w-auto " src={AlcoraoBanner} alt="" />
             </div>
             <div className="absolute top-0 bottom-0 lg:left-[60vw] left-0 flex flex-col">
