@@ -3,6 +3,7 @@ import Banner from './components/Banner/Banner'
 import Produtos from './components/Produtos/Produtos'
 import Beneficios from './components/Benefícios/Beneficios'
 import ProdutosMobile from './components/ProdutosMobile/ProdutosMobile'
+import Depoimentos from './components/Depoimentos/Depoimentos'
 
 function App() {
 
@@ -13,6 +14,7 @@ function App() {
       <Produtos/>
       <ProdutosMobile/>
       <Beneficios/>
+      <Depoimentos/>
     </div>
   )
 }

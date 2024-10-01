@@ -24,7 +24,7 @@ export default function Beneficios(){
 
 
     return(
-        <div className="bg-verdeEscuro min-h-[80vh] relative flex flex-col px-[50px] py-[100px] mb-[400px]">
+        <div className="bg-verdeEscuro min-h-[80vh] relative flex flex-col px-[50px] py-[100px]">
             <div className="absolute top-0 bottom-0 right-0">
                 <img className="h-full w-auto object-cover" src={imgFundoBeneficios} alt="" />
             </div>
