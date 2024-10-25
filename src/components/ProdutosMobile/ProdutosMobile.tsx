@@ -10,7 +10,7 @@ import meca from "../../assets/images/Meca.jpg"
 import calendario from "../../assets/images/calendario.jpg"
 import pilares from "../../assets/images/5pilares.jpg"
 import literatura from "../../assets/images/literatura.jpg"
-
+import estrelaArabe from "../../assets/images/estrelaArrabe.png" 
 
 gsap.registerPlugin(useGSAP)
 gsap.registerPlugin(ScrollTrigger)
@@ -28,8 +28,7 @@ export default function ProdutosMobile(){
         scrollTrigger: {
             trigger: ".containerProdutos",
             start: "200px bottom",
-            end: "200px bottom",
-            markers: true
+            end: "200px bottom"
         }
     });
     textAnimation1.from('.text', {
@@ -159,6 +158,9 @@ export default function ProdutosMobile(){
         <div className="containerProdutos bg-verdeClaro py-[50px] lg:hidden">
             <div className="flex flex-col w-[90vw] m-[0_auto]">
                 <div className="text-verdeEscuro text-4xl lg:mt-0 uppercase flex overflow-hidden">
+                    <div className="self-center mr-4">
+                        <img className="w-12 h-auto" src={estrelaArabe} alt="" />
+                    </div>
                     {
                         titulo.split("").map(item => {
                             if(item == " "){

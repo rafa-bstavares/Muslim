@@ -10,7 +10,7 @@ import meca from "../../assets/images/Meca.jpg"
 import calendario from "../../assets/images/calendario.jpg"
 import pilares from "../../assets/images/5pilares.jpg"
 import literatura from "../../assets/images/literatura.jpg"
-
+import estrelaArabe from "../../assets/images/estrelaArrabe.png" 
 
 gsap.registerPlugin(useGSAP)
 gsap.registerPlugin(ScrollTrigger)
@@ -43,7 +43,7 @@ export default function Produtos(){
     gsap.from(".cartaLinha1", {
         scrollTrigger: {
             trigger: ".linha1Prod",
-            start: "400px bottom",
+            start: "150px bottom",
             end: "800px bottom",
             toggleActions: "play none none reverse"
         },
@@ -60,7 +60,7 @@ export default function Produtos(){
     gsap.from(".cartaLinha2", {
         scrollTrigger: {
             trigger: ".linha2Prod",
-            start: "400px bottom",
+            start: "150px bottom",
             end: "800px bottom",
             toggleActions: "play none none reverse"
         },
@@ -76,7 +76,7 @@ export default function Produtos(){
     gsap.from(".cartaLinha3", {
         scrollTrigger: {
             trigger: ".linha3Prod",
-            start: "400px bottom",
+            start: "150px bottom",
             end: "800px bottom",
             toggleActions: "play none none reverse"
         },
@@ -99,6 +99,9 @@ export default function Produtos(){
         <div className="containerProdutos bg-verdeClaro px-[50px] py-[100px] hidden lg:block">
             <div className="flex flex-col ">
                 <div className="text-verdeEscuro text-6xl lg:mt-0 mt-12 uppercase flex overflow-hidden relative z-50">
+                    <div className="self-center mr-12">
+                        <img className="w-12 h-auto" src={estrelaArabe} alt="" />
+                    </div>
                     {
                         titulo.split("").map(item => {
                             if(item == " "){
@@ -108,6 +111,7 @@ export default function Produtos(){
                             }
                         })
                     }
+
                 </div>
                 <div  className="linha1Prod flex flex-col lg:mt-20 mt-12 lg:gap-32 gap-8">
                     <div className="flex lg:flex-row flex-col lg:gap-20 gap-8">

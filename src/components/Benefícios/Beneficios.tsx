@@ -5,6 +5,7 @@ import variedade from "../../assets/images/variedade.svg"
 import gsap from "gsap"
 import ScrollTrigger from "gsap/ScrollTrigger"
 import { useGSAP } from "@gsap/react"
+import estrelaClara from "../../assets/images/estrelaArabeClara.png"
 
 gsap.registerPlugin(ScrollTrigger)
 gsap.registerPlugin(useGSAP)
@@ -24,15 +25,18 @@ export default function Beneficios(){
 
 
     return(
-        <div className="bg-verdeEscuro min-h-[80vh] relative flex flex-col px-[50px] py-[100px]">
+        <div className="bg-verdeEscuro min-h-[80vh] relative flex flex-col lg:px-[50px] px-[20px] py-[100px]">
             <div className="absolute top-0 bottom-0 right-0">
                 <img className="h-full w-auto object-cover" src={imgFundoBeneficios} alt="" />
             </div>
-            <div className="text-verdeClaro mb-32 lg:text-6xl text-4xl uppercase">
+            <div className="text-verdeClaro lg:w-auto w-[90vw] mb-32 lg:text-6xl text-4xl uppercase flex lg:items-stretch items-center">
+                <div className="self-center lg:mr-12 mr-4">
+                    <img className="w-12 h-auto" src={estrelaClara} alt="" />
+                </div>
                 Benefícios
             </div>
             <div className="flex lg:flex-row flex-col justify-between items-center mb-16 lg:gap-0 gap-8">
-                <div className="lg:w-[28vw] w-[85vw] min-h-[40vh] bg-verdeClaro relative 2-30 flex flex-col items-center justify-center p-4">
+                <div className="lg:w-[28vw] w-[90vw] min-h-[40vh] bg-verdeClaro relative 2-30 flex flex-col items-center justify-center p-4">
                     <img className="w-1/3 h-auto object-cover mb-8" src={qualidade} alt="qualidade" />
                     <div className="mb-2 text-xl text-verdeEscuro text-center">
                         Qualidade e Autenticidade
@@ -41,7 +45,7 @@ export default function Beneficios(){
                         Todos os nossos produtos são escolhidos com cuidado para garantir a melhor qualidade e autenticidade.
                     </div>
                 </div>
-                <div className="lg:w-[28vw] w-[85vw] min-h-[40vh] bg-verdeClaro relative 2-30 flex flex-col items-center justify-center p-4">
+                <div className="lg:w-[28vw] w-[90vw] min-h-[40vh] bg-verdeClaro relative 2-30 flex flex-col items-center justify-center p-4">
                     <img className="w-1/3 h-auto object-cover mb-8" src={conexao} alt="conexao" />
                     <div className="mb-2 text-xl text-verdeEscuro text-center">
                         Conexao Espiritual
@@ -50,7 +54,7 @@ export default function Beneficios(){
                         Nossos itens ajudam a reforçar sua fé e conexão com a cultura islâmica.
                     </div>
                 </div>
-                <div className="lg:w-[28vw] w-[85vw] min-h-[40vh] bg-verdeClaro relative 2-30 flex flex-col items-center justify-center p-4">
+                <div className="lg:w-[28vw] w-[90vw] min-h-[40vh] bg-verdeClaro relative 2-30 flex flex-col items-center justify-center p-4">
                     <img className="w-1/3 h-auto object-cover mb-8" src={variedade} alt="variedade" />
                     <div className="mb-2 text-xl text-verdeEscuro text-center">
                         Variedade
@@ -60,9 +64,9 @@ export default function Beneficios(){
                     </div>
                 </div>
             </div>
-            <div className="containerBtBeneficios text-center bg-white border-2 border-solid border-white lg:px-12 lg:py-4 px-8 py-4 self-center text-verdeEscuro sm:text-xl text-lg font-bold relative group cursor-pointer">
+            <div className="containerBtBeneficios lg:w-[50vw] w-[90vw] text-center bg-white border-2 border-solid border-white lg:px-12 lg:py-4 px-8 py-4 self-center text-verdeEscuro items-center sm:text-xl text-lg font-bold relative group cursor-pointer">
                 Explore Nossos Benefícios
-                <div className=" btBeneficiosCima absolute inset-0 lg:px-12 lg:py-4 px-8 py-4 border-2 border-solid border-verdeClaro bg-verdeEscuro text-verdeClaro flex justify-center text-center items-center sm:text-xl text-lg font-bold [clip-path:polygon(0%_0%,0%_0%,0%_100%,0%_100%)] group-hover:[clip-path:polygon(0%_0%,100%_0%,100%_100%,0%_100%)] transition-all duration-700 ease-in-out ">
+                <div className=" btBeneficiosCima absolute lg:w-[50vw] w-[90vw] -inset-[2px] lg:px-12 lg:py-4 px-8 py-4 border-2 border-solid border-verdeClaro bg-verdeEscuro text-verdeClaro flex justify-center text-center items-center sm:text-xl text-lg font-bold [clip-path:polygon(0%_0%,0%_0%,0%_100%,0%_100%)] group-hover:[clip-path:polygon(0%_0%,100%_0%,100%_100%,0%_100%)] transition-all duration-700 ease-in-out ">
                     Explore Nossos Benefícios
                 </div>
             </div>

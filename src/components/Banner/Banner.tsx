@@ -1,11 +1,11 @@
-import AlcoraoBanner from "../../assets/images/imgAlcorao2.jpg"
+import imgBannerSecundaria from "../../assets/images/imgBannerSecundaria (6).png"
 import bannerHomem from "../../assets/images/BannerHomem.jpg"
-import textoFundoBanner from "../../assets/images/textoFundoBanner.jpg"
+import textoFundoBanner from "../../assets/images/textoFundoBanner.png"
 import { useRef } from "react"
 import gsap from "gsap"
 import { useGSAP } from "@gsap/react"
 import ScrollTrigger from "gsap/ScrollTrigger"
-
+import logo from "../../assets/images/logoMuslim.png"
 
 gsap.registerPlugin(useGSAP)
 gsap.registerPlugin(ScrollTrigger)
@@ -19,6 +19,7 @@ export default function Banner(){
     const imgTexto2 = useRef(null)
     const imgTexto3 = useRef(null)
     const imgTexto4 = useRef(null)
+    const imgPalavra = useRef(null)
 
     const tituloL1 = "Celebre sua Fé com"
     const tituloL2 = "Produtos Islâmicos"
@@ -106,6 +107,19 @@ export default function Banner(){
             each: 0.07 
             }
         });
+
+
+        gsap.to(imgPalavra.current, {
+            scrollTrigger: {
+                trigger: containerBanner.current,
+                start: "top top",
+                end: "top bottom",
+                scrub: true
+            },
+            x: 0
+        })
+
+
     })
 
 
@@ -116,9 +130,10 @@ export default function Banner(){
         <div ref={containerBanner} className="bg-verdeClaro lg:h-[120vh] h-screen relative flex flex-col">
             <div className="lg:hidden absolute bottom-0 left-0 right-0 h-[55vh] [background:linear-gradient(to_top,#d0ffe2_85%,transparent)] z-20"></div>
 
-            <div className="hidden h-[20vh] bottom-0 right-0 z-30 translate-y-1/4 translate-x-1/2">
-                <img className="h-full w-auto " src={AlcoraoBanner} alt="" />
+            <div  className=" absolute bottom-0 right-0 left-0 h-[10vh]  z-50 -translate-y-1/2  opacity-70 lg:hidden">
+                <img ref={imgPalavra} className="w-full h-auto " src={imgBannerSecundaria} alt="" />
             </div>
+
             <div className="absolute top-0 bottom-0 lg:left-[60vw] left-0 flex flex-col">
                 <img ref={imgTexto1} className="h-1/4 w-auto object-cover " src={textoFundoBanner} alt="imagem" />
                 <img ref={imgTexto2} className="h-1/4 w-auto object-cover " src={textoFundoBanner} alt="imagem" />
@@ -129,10 +144,12 @@ export default function Banner(){
                 <img ref={imgHomem} className="lg:w-[25vw] w-full lg:h-auto h-full object-cover" src={bannerHomem} alt="imagem banner" />
             </div>
             <div className="lg:w-[60vw] lg:h-[100vh] lg:ml-10 lg:flex lg:flex-col justify-between lg:relative absolute lg:top-auto lg:left-auto lg:right-auto top-[50%] left-0 right-0  z-30">
-                <div className="h-[20vh] relative lg:block hidden">
-                    <img className="ml-[10%] h-full w-auto object-cover" src={AlcoraoBanner} alt="imagem alcorão" />
+                <div className="h-[20vh] relative lg:block hidden opacity-30 p-4">
+                    {/*<img className="ml-[10%] h-auto w-[40vw] object-cover" src={imgBannerSecundaria} alt="imagem alcorão" />*/}
+
+                    <img className="h-full w-auto" src={logo} alt="logo" />
                 </div>
-                <div className="text-verdeEscuro flex flex-col lg:text-7xl text-4xl max-[330px]:text-3xl max-[280px]:text-2xl font-Questrial lg:pr-12  text-center lg:text-start">
+                <div className="text-verdeEscuro flex flex-col lg:text-8xl text-4xl max-[330px]:text-3xl max-[280px]:text-2xl font-Questrial lg:pr-12  text-center lg:text-start">
                     <div className="flex overflow-hidden lg:justify-start justify-center text-center">
                         {
                             tituloL1.split("").map(item => {
